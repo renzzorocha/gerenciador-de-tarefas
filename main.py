@@ -10,13 +10,8 @@ def exibirTarefas():
 
 def concluirTarefa(tarefa):
     global tarefas
-    novaLista = []
-    for t in tarefas:
-        if t[0] == tarefa:
-            novaLista.append((tarefa, 'concluida'))
-        else:
-            novaLista.append(t)
-    tarefas = novaLista
+    tarefas = [ ( t[0], 'concluida' ) if t[0] == tarefa else t for t in tarefas ]
+
 
 adicionarTarefa('teste')
 exibirTarefas()
