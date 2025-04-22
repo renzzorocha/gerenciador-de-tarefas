@@ -12,8 +12,7 @@ def concluirTarefa(tarefa):
     global tarefas
     tarefas = [ ( t[0], 'concluida' ) if t[0] == tarefa else t for t in tarefas ]
 
+def removerTarefa(tarefa):
+    global tarefas
+    tarefas = [ t for t in tarefas if t[0] != tarefa ]
 
-adicionarTarefa('teste')
-exibirTarefas()
-concluirTarefa('teste')
-exibirTarefas()
