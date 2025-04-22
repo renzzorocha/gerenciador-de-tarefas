@@ -59,5 +59,6 @@ while True:
             break;
         case _:
             print('Opção Inválida')
-
+    print()
+    input('Pressione ENTER para continuar...')
 
