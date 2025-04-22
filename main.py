@@ -5,6 +5,9 @@ def adicionarTarefa(tarefa):
     tarefas.append(novaTarefa)
 
 def exibirTarefas():
+    if not tarefas:
+        print('A lista está vazia')
+        return
     for t in tarefas:
         print(f'{t[0]} - Status: {t[1]}')
 
