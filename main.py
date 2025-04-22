@@ -24,3 +24,37 @@ def buscarTarefa(tarefa):
             print(f'Tarefa encontrada: {titulo} - Status: {status}')
     else:
         print('Tarefa não encontrada.')
+
+while True:
+    print('---- BOAS VINDAS AO GERENCIADOR DE LISTA DE TAREFAS ----')
+    print()
+    print('O que você deseja fazer?')
+    print('1 - Listas tarefas')
+    print('2 - Adicionar tarefa')
+    print('3 - Remover tarefa')
+    print('4 - Marcar tarefa como concluída')
+    print('5 - Buscar tarefa')
+    print('0 - Sair do Programa')
+    opcao = int(input('Digite uma opção: '))
+
+    match opcao:
+        case 1: 
+            exibirTarefas()
+        case 2: 
+            tarefa = input('Digite a tarefa: ')
+            adicionarTarefa(tarefa)
+        case 3:
+            tarefa = input('Digite a tarefa: ')
+            removerTarefa(tarefa)
+        case 4: 
+            tarefa = input('Digite a tarefa: ')
+            concluirTarefa(tarefa)
+        case 5:
+            tarefa = input('Digite a tarefa: ')
+            buscarTarefa(tarefa)
+        case 0:
+            break;
+        case _:
+            print('Opção Inválida')
+
+
