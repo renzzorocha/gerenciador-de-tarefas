@@ -17,7 +17,7 @@ def removerTarefa(tarefa):
     tarefas = [ t for t in tarefas if t[0] != tarefa ]
 
 def buscarTarefa(tarefa):
-    global tarefast
+    global tarefas
     resultado = [ t for t in tarefas if t[0].lower() == tarefa.lower() ]
     if resultado:
         for titulo, status in resultado:
