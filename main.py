@@ -4,6 +4,8 @@ def adicionarTarefa(tarefa):
     novaTarefa = (tarefa, 'pendente')
     tarefas.append(novaTarefa)
 
+import os
+
 def exibirTarefas():
     if not tarefas:
         print('A lista está vazia')
@@ -29,6 +31,8 @@ def buscarTarefa(tarefa):
         print('Tarefa não encontrada.')
 
 while True:
+    os.system('cls | clear')
+    
     print('---- BOAS VINDAS AO GERENCIADOR DE LISTA DE TAREFAS ----')
     print()
     print('O que você deseja fazer?')
